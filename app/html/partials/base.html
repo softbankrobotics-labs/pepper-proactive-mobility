@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="/apps/proactive-mobility/css/base.css" />
+<style>
+.techdropdown {
+    width: 200px;
+    margin: 30px 0 0 0;
+}
+
+.explanation {
+    padding-top: 20px;
+}
+
+</style>
+<h1 translate="TITLE_PROACTIVEMOBILITY" class="ar-title"></h1>
+<div>
+    <div ng-if="isActive==1">
+        <div class="ar-float ar-height ar-link ar-charging-btn-img"><img ng-click="setIsActive(0);" ng-src="/apps/proactive-mobility/img/page/button_on.png"/></div>
+        <div class="ar-right ar-charging-available-title" ng-bind-html="'MES_PROACTIVEMOBILITY_ISACTIVE' | translate" />
+        <div class="ar-right ar-text-small" ng-bind-html="'MES_PROACTIVEMOBILITY_EXPLANATION' | translate" />
+    </div>
+    <div ng-if="isActive!=1">
+        <div class="ar-float ar-height ar-link ar-charging-btn-img"><img ng-click="setIsActive(1);" ng-src="/apps/proactive-mobility/img/page/button_off.png"/></div>
+        <div class="ar-right ar-charging-available-title" ng-bind-html="'MES_PROACTIVEMOBILITY_ISACTIVE' | translate" />
+    </div>
+    <div class="ar-parameters" style="margin-top: 15px">
+        <div class="ar-div" ng-if="isActive==1">
+
+            <div>
+                <div class="ar-float ar-height ar-basictext">
+                    <div class="techdropdown" dropdown-select="technologyEntries" dropdown-model="technologyEntry" dropdown-item-label="label" dropdown-onchange="setTechnology(technologyEntry)" ></div>
+                </div>
+
+                <div class="ar-right ar-charging-available-title" ng-bind-html="'MES_PROACTIVEMOBILITY_TECHNOLOGY' | translate" />
+                <div class="ar-right ar-text-small" ng-bind-html="'MES_PROACTIVEMOBILITY_TECHNOLOGY_EXPLANATION' | translate" />
+            </div>
+
+            <div>
+                <div class="ar-right ar-charging-available-title" ng-bind-html="'MES_PROACTIVEMOBILITY_SAFEZONE' | translate" />
+
+                <div class="ar-float ar-height ar-basictext">
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canDecrease('MaxDistance')]" ng-click="decrease('MaxDistance')"><img src="img/sub40.png"/></div>
+                    <div class="ar-basictext ar-volume-label">{{prefValues['MaxDistance']}}m</div>
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canIncrease('MaxDistance')]" ng-click="increase('MaxDistance')"><img src="img/add40.png"/></div>
+                </div>
+
+                <div class="ar-right ar-text-small explanation" ng-bind-html="'MES_PROACTIVEMOBILITY_SAFEZONE_MAXDISTANCE' | translate" />
+
+            </div>
+
+            <div>
+
+                <div class="ar-float ar-height ar-basictext">
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canDecrease('MaxAngle')]" ng-click="decrease('MaxAngle')"><img src="img/sub40.png"/></div>
+                    <div class="ar-basictext ar-volume-label">{{prefValues['MaxAngle']}}°</div>
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canIncrease('MaxAngle')]" ng-click="increase('MaxAngle')"><img src="img/add40.png"/></div>
+                </div>
+
+                <div class="ar-right ar-text-small explanation" ng-bind-html="'MES_PROACTIVEMOBILITY_SAFEZONE_MAXANGLE' | translate" />
+
+            </div>
+
+            <div>
+                <div class="ar-right ar-charging-available-title" ng-bind-html="'MES_PROACTIVEMOBILITY_GOHOMETIMEOUT' | translate" />
+
+                <div class="ar-float ar-height ar-basictext">
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canDecrease('GoHomeTimeout')]" ng-click="decrease('GoHomeTimeout')"><img src="img/sub40.png"/></div>
+                    <div class="ar-basictext ar-volume-label">{{prefValues['GoHomeTimeout']}}s</div>
+                    <div class="ar-img ar-volume-btn" ng-class="{true:'', false:'volume_disable'}[canIncrease('GoHomeTimeout')]" ng-click="increase('GoHomeTimeout')"><img src="img/add40.png"/></div>
+                </div>
+
+                <div class="ar-right ar-text-small explanation" ng-bind-html="'MES_PROACTIVEMOBILITY_GOHOMETIMEOUT_EXPLANATION' | translate" />
+
+            </div>
+        </div>
+    </div>
+</div>

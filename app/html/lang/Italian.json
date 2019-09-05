@@ -1,0 +1,16 @@
+{
+    "TITLE_PROACTIVEMOBILITY": "Proactive Mobility",
+
+    "MES_PROACTIVEMOBILITY_ISACTIVE": "La Mobilità Proattiva è Attivata?",
+    "MES_PROACTIVEMOBILITY_EXPLANATION": "Se è attivata Pepper si sposterà verso di te.",
+
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY": "Tecnologia",
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY_EXPLANATION": "Come farà Pepper a saper tornare a casa?",
+
+    "MES_PROACTIVEMOBILITY_SAFEZONE": "Zona Sicura",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXDISTANCE": "Quanto si può allontanare Pepper da casa?",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXANGLE": "Dentro quale angolo di fronte alla sua casa è permesso a Pepper di muoversi?",
+
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT": "Tempo scaduto",
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT_EXPLANATION": "Se Pepper è solo e lontano da casa, tornerà a casa dopo questo lasso di tempo."
+}

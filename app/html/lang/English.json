@@ -1,0 +1,16 @@
+{
+    "TITLE_PROACTIVEMOBILITY": "Proactive Mobility",
+
+    "MES_PROACTIVEMOBILITY_ISACTIVE": "Is Proactive Mobility Active?",
+    "MES_PROACTIVEMOBILITY_EXPLANATION": "If this is active Pepper will move towards you.",
+
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY": "Technology",
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY_EXPLANATION": "How will Pepper know how to return to his home.",
+
+    "MES_PROACTIVEMOBILITY_SAFEZONE": "Safe Zone",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXDISTANCE": "How far from his home is Pepper allowed to go?",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXANGLE": "Inside what angle in front of his home Pepper is allowed to move?",
+
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT": "Timeout",
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT_EXPLANATION": "If Pepper is alone and away from home, he will go back home after this delay."
+}

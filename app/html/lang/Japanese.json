@@ -1,0 +1,16 @@
+{
+    "TITLE_PROACTIVEMOBILITY": "Proactive Mobility",
+
+    "MES_PROACTIVEMOBILITY_ISACTIVE": "プロアクティブモビリティは活動ですか？",
+    "MES_PROACTIVEMOBILITY_EXPLANATION": "これが活動した場合、ペッパーはあなたに向かって移動します。",
+
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY": "技術",
+    "MES_PROACTIVEMOBILITY_TECHNOLOGY_EXPLANATION": "どうやってペッパーは彼の家へ帰ることができますか？",
+
+    "MES_PROACTIVEMOBILITY_SAFEZONE": "安全地帯",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXDISTANCE": "彼の家からペッパーはどこまで行くことが許されていますか？",
+    "MES_PROACTIVEMOBILITY_SAFEZONE_MAXANGLE": "彼の家の前で、どんな角度でペッパーは移動できることが許されていますか？",
+
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT": "タイムアウト",
+    "MES_PROACTIVEMOBILITY_GOHOMETIMEOUT_EXPLANATION": "もしペッパーが一人で家から離れているなら、彼はこの延長をおわって、帰宅します。"
+}

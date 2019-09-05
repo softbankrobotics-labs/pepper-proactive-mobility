@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package uuid="proactive-mobility" version="1.0.0">
+ <names>
+  <name lang="en_US">Proactive Mobility</name>
+  <name lang="fr_FR">Proactive Mobility</name>
+ </names>
+ <descriptions>
+  <description lang="de_DE">Proactive Mobility ermöglicht es Pepper, sich auf die Benutzer in der Nähe zuzubewegen, um eine Interaktion einzuleiten und nach Abschluss der Interaktion wieder in seine ursprüngliche Position zurückzukehren. 
+Die Definition der Referenzposition erfolgt, wenn Pepper aufsteht (nach dem Einschalten des Roboters oder zwei Klicks auf Peppers Haupttaste). Wenn die Startkonfiguration erscheint, startet die Anwendung danach. 
+Die Zone, in der Pepper navigieren darf, um in eine Interaktion mit dem Benutzer einzutreten, sowie die Technologie, mit der er in seine Ausgangsposition zurückkehrt, sind programmierbar. 
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "IsActive";
+Standardwert: "Off";
+Zulässige Werte "On", "Off";
+Beschreibung: definiert, wenn Proactive-Mobility aktiv ist;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "Technology";
+Standardwert: "Slam";
+Zulässige Werte: "Aruco", "Pod", "Slam”;
+Beschreibung: Technologie, die von Proactive-Mobility verwendet wird, um zur Referenzposition zurückzukehren;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "MaxDistance";
+Standardwert: "3.0";
+Zulässige Werte: Gleitkommazahl zwischen 0 und 3.0 inklusive;
+Beschreibung: Maximale Entfernung von Peppers Mobilitätszone; 
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "MaxAngle";
+Standardwert: "180";
+Zulässige Werte: Gleitkommazahl zwischen 0 und 360 inklusive;
+Beschreibung: Öffnungswinkel von Peppers Mobilitätszone von seiner Referenzposition aus;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "GoHomeTimeout";
+Standardwert: "10";
+Zulässige Werte: Positive Ganzzahl;
+Beschreibung: Wartezeit für Pepper, bevor er nach einer Interaktion zu seiner Position zurückkehrt;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "TabletFeedback";
+Standardwert:: "On";
+Zulässige Werte: "On", "Off";
+Beschreibung: Autorisiert eine visuelle Rückmeldung vom Roboter auf dem Tablet;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "VocalFeedback";
+Standardwert:: "On";
+Zulässige Werte: "On", "Off";
+Beschreibung: Autorisiert eine stimmliche Rückmeldung vom Roboter;
+
+Domäne: com.softbankrobotics.proactive-mobility;
+Name: "NotificationFeedback";
+Standardwert:: "On";
+Zulässige Werte: "On", "Off";
+Beschreibung: Ermöglicht eine visuelle Rückmeldung mit der Anzeige von Benachrichtigungen auf den Schultern des Roboters;
+</description>
+  <description lang="en_US">Proactive Mobility allows Pepper to move towards nearby users to engage in an interaction and then to return to his original position when the interaction has been completed. 
+The definition of the reference position is made when Pepper stands up (after the robot is turned on or two clics on Pepper's main button). If the boot config appears, the application starts afterwards. 
+The zone in which Pepper is authorized to navigate to enter into an interaction with users as well as the technology used to return to his initial position are programmable. 
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "IsActive";
+Default value: "Off";
+Authorized values "On", "Off";
+Description: defined if Proactive-Mobility is active;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "Technology";
+Default value: "Slam";
+Authorized values: "Aruco", "Pod", "Slam”;
+Description: Technology used by Proactive-Mobility to return to his reference position;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "MaxDistance";
+Default value: "3.0";
+Authorized values: Floating number between 0 and 3.0 inclusive;
+Description: Maximum distance of Pepper’s mobility zone; 
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "MaxAngle";
+Default value: "180";
+Authorized values: Whole number between 0 and 360 inclusive;
+Description: Opening angle of Pepper’s mobility zone from his reference position;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "GoHomeTimeout";
+Default value: "10";
+Authorized values: Positive whole number;
+Description: Waiting time for Pepper before returning to his position after an interaction;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "TabletFeedback";
+Default value:: "On";
+Authorized values: "On", "Off";
+Description: Authorizes a visual feedback from the robot, on the tablet;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "VocalFeedback";
+Default value:: "On";
+Authorized values: "On", "Off";
+Description: Authorizes a vocal feedback from the robot;
+
+Domain: com.softbankrobotics.proactive-mobility;
+Name: "NotificationFeedback";
+Default value:: "On";
+Authorized values: "On", "Off";
+Description: Allows a visual feedback, with the display of notifications on the robot's shoulders;
+</description>
+  <description lang="es_ES">Proactive Mobility permite que Pepper se mueva hacia los usuarios cercanos para realizar una interacción y luego regrese a su posición original cuando la interacción haya terminado.
+La definición de la posición de referencia se realiza cuando Pepper se pone de pie (luego de que el robot es encendido o se dan dos clics en el botón principal de Pepper). Si aparece el inicio de configuración, la aplicación comienza luego. 
+La zona en la que Pepper está autorizado a navegar para interactuar con los usuarios, al igual que la metodología usada para que regrese a su posición inicial, son programables. 
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nombre: "IsActive"; 
+Valor predeterminado: "Off"; 
+Valores autorizados: "On", "Off"; 
+Descripción: Definida si Proactive-Mobility está activa; 
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nombre: "Technology"; 
+Valor predeterminado: "Slam"; 
+Valores autorizados: "Aruco", "Pod", "Slam”; 
+Descripción: Tecnología usada por Proactive-Mobility para regresar a su posición de referencia; 
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nombre: "MaxDistance"; 
+Valor predeterminado: "3.0"; 
+Valores autorizados: Número flotante entre 0 y 3,0 inclusive; 
+Descripción: Máxima distancia de la zona de movilidad de Pepper; 
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nombre: "MaxAngle"; 
+Valor predeterminado: "180"; 
+Valores autorizados: Número entero entre 0 y 360 inclusive; 
+Descripción: Ángulo de apertura de la zona de movilidad desde la posición de referencia de Pepper; 
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nombre: "GoHomeTimeout"; 
+Valor predeterminado: "10"; 
+Valores autorizados: Número entero positivo; 
+Descripción: Tiempo de espera de Pepper antes de regresar a su posición luego de una interacción;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nombre: "TabletFeedback";
+Valor predeterminado:: "Activo";
+Valores autorizados: "Activo", "Desactivado";
+Descripción: Autoriza una retroalimentación visual del robot, en la tableta;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nombre: "VocalFeedback";
+Valor predeterminado:: "Activo";
+Valores autorizados: "Activo", "Desactivado";
+Descripción: Autoriza una retroalimentación vocal del robot;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nombre: "NotificationFeedback";
+Valor predeterminado:: "Activo";
+Valores autorizados: "Activo", "Desactivado";
+Descripción: Permite una retroalimentación visual, mostrando las notificaciones en los hombros del robot;
+  </description>
+  <description lang="fr_FR">Proactive Mobility permet à Pepper de se déplacer vers des utilisateurs à proximité pour engager l'interaction puis de retourner à sa position d'origine lorsque celle-ci est terminée.
+La définition de la place de référence se fait quand Pepper se lève (après un démarrage du robot ou deux double clics consécutifs sur le bouton principal de Pepper). Si le boot config apparait, l'application démarre après celui-ci.
+La zone dans laquelle Pepper est autorisé à naviger pour entrer en interaction avec les utilisateurs ainsi que la technologie utilisée pour retourner à sa position initiale sont paramétrables.
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "IsActive" ;
+Valeur par défaut: "Off" ;
+Valeurs autorisés: "On", "Off" ;
+Description: défini si Proactive-Mobility est activé ;
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "Technology" ;
+Valeur par défaut: "Slam" ;
+Valeurs autorisés: "Aruco", "Pod", "Slam" ;
+Description: Technologie utilisée par Proactive-Mobility pour retourner à sa place de référence ;
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "MaxDistance" ;
+Valeur par défaut: "3.0" ;
+Valeurs autorisés: Nombre flottant entre 0 et 3.0 inclus ;
+Description: Distance maximale de la zone de déplacement de Peppper ; 
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "MaxAngle" ;
+Valeur par défaut: "180" ;
+Valeurs autorisés: Nombre entier entre 0 et 360 inclus ;
+Description: Angle d'ouverture de la zone de déplacement de Peppper depuis sa place de référence ;
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "GoHomeTimeout" ;
+Valeur par défaut: "10" ;
+Valeurs autorisés: Nombre entier positif ;
+Description: Temps attendu par Pepper avant de retourner à sa place après une interaction ;
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "TabletFeedback" ;
+Valeur par défaut: "On" ;
+Valeurs autorisés: "On", "Off" ;
+Description: Autorise un retour visuel, par affichage tablette, du robot;
+
+Domaine: com.softbankrobotics.proactive-mobility ;
+Nom: "VocalFeedback" ;
+Valeur par défaut: "On" ;
+Valeurs autorisés: "On", "Off" ;
+Description: Autorise un retour vocal du robot;
+
+Domaine: com.softbankrobotics.proactive-mobility;
+Nom: "NotificationFeedback";
+Valeur par défaut:: "On";
+Valeurs autorisés: "On", "Off";
+Description: Autorise un retour visuel, par affichage des notifications sur les épaules du robot;
+</description>
+  <description lang="it_IT">Proactive Mobility consente a Pepper di spostarsi verso gli utenti vicini per impegnarsi in un'interazione e poi tornare alla sua posizione originale quando l'interazione è stata completata. 
+La definizione della posizione di riferimento si realizza quando Pepper è in piedi (dopo aver acceso il robot o con due click sulla mano sul tasto principale di Pepper). Se appare la configurazione d'avvio, di seguiito inizia l'applicazione. 
+La zona in cui Pepper è autorizzato a navigare per entrare in un'interazione con gli utenti così come la tecnologia utilizzata per tornare alla sua posizione iniziale sono programmabili. 
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nome: "IsActive"; 
+Valore predefinito: "Off";
+Valori autorizzati "On", "Off";
+Descrizione: definita se Proactive-Mobility è attiva;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nome: "Technology"; 
+Valore predefinito: "Slam";
+Valori autorizzati: "Aruco", "Pod", "Slam”;
+Descrizione: Tecnologia utilizzata da Proactive-Mobility per tornare alla sua posizione di riferimento;
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nome: "MaxDistance"; 
+Valore predefinito: "3.0";
+Valori autorizzati: numero mobile compreso tra 0 e 3.0 inclusi; 
+Descrizione: Distanza massima della zona di mobilità del Pepper;
+
+Dominio: com.softbankrobotics.proactive-mobility; 
+Nome: "MaxAngle"; 
+Valore predefinito: "180"; 
+Valori autorizzati: numero intero compreso tra 0 e 360 inclusi; 
+Descrizione: Angolo di apertura della zona di mobilità di Pepper dalla sua posizione di riferimento; 
+
+Domain: com.softbankrobotics.proactive-mobility; 
+Nome: "GoHomeTimeout"; 
+Valore predefinito: "10"; 
+Valori autorizzati: numero intero positivo; 
+Descrizione: tempo di attesa per Pepper prima di tornare alla sua posizione dopo un'interazione;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nome: "Tabletfeedback";
+Valore predefinito:: "On";
+Valori autorizzati: "On", "Off";
+Descrizione: Autorizza un feedback visivo dal robot, sul tablet;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nome: "VocalFeedback";
+Valore predefinito:: "On";
+Valori autorizzati: "On", "Off";
+Descrizione: Autorizza un feedback vocale dal robot;
+
+Dominio: com.softbankrobotics.proactive-mobility;
+Nome: "NotificationFeedback";
+Valore predefinito:: "On";
+Valori autorizzati: "On", "Off";
+Descrizione: Consenti un feedback visivo, con la visualizzazione delle notifiche sulle spalle del robot;
+</description>
+  <description lang="ja_JP">Proactive Mobilityは、Pepperが近くのユーザーと交流することを可能にし、交流が完了すると元の位置に戻ります。 
+基準位置の定義は、Pepperが起き上がったとき（ロボットの電源を入れた後、またはPepperのメインボタンを2回押したとき）です。起動設定が表示された場合は、アプリケーションが起動します。 
+Pepperがユーザーとの交流を開始するために移動する権限を持つゾーンと、初期位置に戻るために使用されたテクノロジーは、プログラム可能です。 
+
+ドメイン：com.softbankrobotics.proactive-mobility; 
+名前："IsActive"; 
+デフォルト値："Off"; 
+許可された値："On"、"Off"; 
+説明：Proactive-Mobilityがアクティブな場合に定義されます。 
+
+ドメイン：com.softbankrobotics.proactive-mobility; 
+名前："Technology"; 
+デフォルト値："Slam"; 
+許可された値："Aruco"、"Pod"、"Slam"; 
+説明：Proactive-Mobilityが参照位置に戻るためのテクノロジー。 
+
+ドメイン：com.softbankrobotics.proactive-mobility; 
+名前："MaxDistance"; 
+デフォルト値："3.0"; 
+許可された値：0から3.0までの浮動小数点数。 
+説明：Pepperのモビリティ・ゾーンの最大距離。 
+
+ドメイン：com.softbankrobotics.proactive-mobility; 
+名前： "MaxAngle"; 
+デフォルト値： "180"; 
+許可された値：0から360までの整数。
+ 説明：Pepperのモビリティ・ゾーンの参照位置からの開き角度。 
+
+ドメイン：com.softbankrobotics.proactive-mobility; 
+名前： "GoHomeTimeout"; 
+デフォルト値： "10"; 
+許可された値：正の整数。
+説明：交流後に元の位置に戻る前のPepperの待ち時間。
+
+ドメイン名：com.softbankrobotics.proactive-mobility;
+名前："TabletFeedback";
+デフォルト値:: "On";
+許可された値： "On"、"Off";
+説明：タブレットにロボットからの視覚的なフィードバックを承認します;
+
+ドメイン名：com.softbankrobotics.proactive-mobility;
+名前："VocalFeedback";
+デフォルト値:: "On";
+許可された値： "On"、"Off";
+説明：ロボットからのボーカルフィードバックを許可します;
+
+ドメイン名：com.softbankrobotics.proactive-mobility;
+名前："NotificationFeedback";
+デフォルト値:: "On";
+許可された値： "On"、"Off";
+説明：ロボットの肩に通知を表示され、視覚的なフィードバックを可能になります;
+</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>fr_FR</language>
+  <language>es_ES</language>
+  <language>de_DE</language>
+  <language>it_IT</language>
+  <language>ja_JP</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>fr_FR</language>
+  <language>es_ES</language>
+  <language>de_DE</language>
+  <language>it_IT</language>
+  <language>ja_JP</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="gohome">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <tags>
+    <tag lang="en_US">widgetRobotsgate</tag>
+    <tag lang="fr_FR">widgetRobotsgate</tag>
+   </tags>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA['ProactiveMobility/ShouldGoHome']]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="sethome">
+   <nature>interactive</nature>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA['ProactiveMobility/ShouldDefineHome' && !'BatteryTrapIsOpen']]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="goengage">
+   <nature>solitary</nature>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA['ProactiveMobility/AllowGoEngage' && ('Launchpad/DistanceOfTrackedHuman' > 0.8)]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement minVersion="2.5"/>
+  <robotRequirement model="JULIETTE"/>
+ </requirements>
+ <services>
+  <service name="dxaruco" autorun="true" execStart="/usr/bin/python2 scripts/dxaruco/dxaruco.py"/>
+  <service name="dxhomefinder" autorun="true" execStart="/usr/bin/python2 scripts/dxhomefinder/dxhomefinder.py"/>
+  <service name="positionmanager" autorun="true" execStart="/usr/bin/python2 scripts/dxhomefinder/positionmanager.py"/>
+  <service name="dxproactivemobility" autorun="true" execStart="/usr/bin/python2 scripts/dxproactivemobility/dxproactivemobility.py"/>
+ </services>
+</package>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1280, height=800, user-scalable=no" />
+    </head>
+
+    <style>
+        body
+        {
+            margin: 0;
+            opacity: 0;
+            transition: all 1.5s ease-in-out;
+        }
+        img 
+        {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <body onload="onLoad()" onunload="onUnload()">
+        <img id="picture"></img>
+    </body>
+
+    <script>
+        function onLoad() {
+            /*Gets the param 'picture' in the url and defines the proper backround image for the html body*/
+            var paramIndex = window.location.href.indexOf("?picture=");
+            var picture = window.location.href.substr(paramIndex + "?picture=".length)
+            var imgSrc = 'img/feedbacks/' + picture;
+
+            document.getElementById('picture').src = imgSrc;
+            document.body.style.opacity = 1;
+        }
+
+        function onUnload() {
+            document.body.style.opacity = 0;
+        }
+    </script>
+
+</html>

@@ -1,0 +1,20 @@
+.ar-page{width: 100%;}
+.ar-float{float: right;}
+.ar-right {font-family: 'DINRegular';cursor: default;font-size: 30px;color: #555555;}
+.ar-parameters {float: left;clear: both;width: 100%;}
+.ar-timer {padding-top: 10px;}
+.ar-checkbox {vertical-align: middle;}
+.ar-title{margin: 15px 0 0 0;}
+.ar-basictext{font-family: 'DINRegular';cursor: default;display: inline-block;font-size: 24px;color: #555555;}
+.ar-text-small{font-family: 'DINRegular';cursor: default;display: inline-block;font-size: 20px;color: #555555;}
+.ar-text-large{line-height: 65px;}
+.ar-img{display: inline-block;width: 60px;height: 50px;vertical-align: sub;text-align: center;}
+.ar-link, .ar-img{cursor: pointer;}
+.ar-height {height: 40px;line-height: 40px;}
+.ar-warning-subtitle{margin: 60px auto;padding: 10px 5px 10px 75px;}
+.ar-charging-available-title{padding: 20px 0 0 0;}
+.ar-charging-period-edit{margin: 0 0 0 13px;}
+.ar-charging-btn-img{margin: 13px 0 0 0;}
+.ar-timer-desc{padding: 10px 0 0 0;}
+.ar-volume-btn{vertical-align: middle;width: 50px;}
+.ar-volume-label{width: 70px;font-size: 27px;text-align: center;}

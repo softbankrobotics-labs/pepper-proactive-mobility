@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Warning</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{-webkit-user-select: none; background: #eaeaea;}
+        #container{width: 1680px;height: 1050px; margin: 10px auto 0 auto;background: url('img/bg.png') no-repeat 80px center;top: 50%; left: 50%; overflow: hidden;}
+        #button{margin: 230px 0 0 800px; display: inline-block; padding: 10px 20px;}
+        #warning_message_stuck{margin: 180px 0 0 440px;width: 1200px;}
+        #warning_message_touch{margin: 100px 0 0 440px; width: 1200px;}
+        .button{color: #333333; border: 2px solid #999; border-radius: 40px;box-shadow: 0px 0px 0px 2px #A2A2A2; background: linear-gradient(to bottom right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.05) 42%);}
+        .text{ color: rgb(85, 85, 85); cursor: default; font-family: sans-serif; font-size: 62px;height: 52px;line-height: 80px;}
+    </style>
+    <script src="/libs/qimessaging/2/qimessaging.js" type="text/javascript"></script>
+    <script>
+        var content = {
+            "en":{
+                "warning_message_stuck":"Pepper is stuck and cannot move on his own.",
+                "warning_message_touch":"Touch the OK button when you have helped him off his Charging Station.",
+                "button":"&nbsp;&nbsp;OK&nbsp;&nbsp;"
+            },
+            "jp":{
+                "warning_message_stuck":"充電ベースから出ようとしましたが <br /> 何かに引っかかっているようです。",
+                "warning_message_touch":"Pepperを充電ベースから出して、<br /> OKボタンをタップしてください。",
+                "button":"&nbsp;&nbsp;OK&nbsp;&nbsp;"               
+            },
+			"du":{
+                "warning_message_stuck":"Zijn eigen.",
+                "warning_message_touch":"Van het oplaadstation afgeholpen.",
+                "button":"&nbsp;&nbsp;OK&nbsp;&nbsp;"
+            },
+			"nl":{
+                "warning_message_stuck":"Zijn eigen.",
+                "warning_message_touch":"Van het oplaadstation afgeholpen.",
+                "button":"&nbsp;&nbsp;OK&nbsp;&nbsp;"
+            }
+        };
+
+        var session = null;
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        function onLoaded() {
+            console.log("onload");
+            var lang = getParameterByName('lang');
+            lang = (!content[lang])? "en" : lang;
+            for(var t in content[lang])
+                document.getElementById(t).innerHTML = content[lang][t];
+        }
+
+        function onError(error){
+            console.log("onError: " + error);
+        }
+
+        function onConnected(pSession){
+
+            session = pSession;
+        }
+
+        function onDisconnected(){
+            console.log("onDisconnected");
+        }
+
+        function onWarningOk(){
+            console.log("onWarningOk");
+            session.service("ALMemory").then(function (ALMemory){
+                console.log("raising event");
+                ALMemory.raiseEvent("AnimatedRecharge/WarningMode", 0)
+            }, onError);
+        }
+
+        window.addEventListener("load", function(){
+            onLoaded();
+            QiSession(onConnected, onDisconnected);
+        })
+
+
+    </script>
+</head>
+<body>
+    <div id="container" class="text">
+        <div id="warning_message_stuck"> </div>
+        <div id="warning_message_touch"> </div>
+        <div id="button" class="button" onclick="onWarningOk();"> </div>
+    </div>
+</body>
+</html>
